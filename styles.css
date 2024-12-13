@@ -1,0 +1,176 @@
+/* Base Colors and Variables */
+:root {
+    --color-background: #f4e7d3; /* Tan background */
+    --color-card: #e2d2ba; /* Slightly darker tan */
+    --color-text: #000000; /* Black text */
+    --color-accent: #a67c52; /* Dark tan for buttons and highlights */
+    --color-accent-hover: #8b5e36; /* Darker tan for hover */
+    --color-border: #d3c3aa; /* Border color for inputs and cards */
+    --radius: 8px;
+    --spacing: 16px;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* App Container */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-card);
+    padding: var(--spacing);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.header-brand h1 {
+    font-size: 24px;
+    color: var(--color-accent);
+}
+
+.header-nav .btn-secondary {
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    background-color: var(--color-card);
+    transition: background-color 0.3s ease;
+}
+
+.header-nav .btn-secondary:hover {
+    background-color: var(--color-accent-hover);
+}
+
+/* Main Content */
+.main-content {
+    padding: var(--spacing);
+    background-color: var(--color-card);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    margin-bottom: var(--spacing);
+    font-size: 20px;
+    color: var(--color-accent);
+}
+
+/* Form Styles */
+.job-form {
+    display: grid;
+    gap: var(--spacing);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.form-input,
+.form-textarea {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: var(--color-accent);
+    outline: none;
+}
+
+.btn-primary {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-hover);
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--color-card);
+    padding: var(--spacing);
+    border-right: 2px solid var(--color-border);
+}
+
+.sidebar-item {
+    display: block;
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 12px var(--spacing);
+    margin-bottom: var(--spacing);
+    border-radius: var(--radius);
+    background-color: var(--color-card);
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover {
+    background-color: var(--color-accent-hover);
+}
+
+/* Alerts */
+.alert {
+    padding: var(--spacing);
+    border-radius: var(--radius);
+    margin-bottom: var(--spacing);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.alert.success {
+    background-color: rgba(166, 124, 82, 0.2);
+    color: var(--color-accent);
+}
+
+.alert.error {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ff0000;
+}
+
+/* Links */
+.link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--color-accent-hover);
+}
